@@ -9,6 +9,9 @@ def send_command_a():
 
 def send_command_b():
     ser.write(b'b\n')
+    
+def send_command_c():
+    ser.write(b'c\n')
 
 # Create the GUI
 root = tk.Tk()
@@ -19,5 +22,8 @@ button_a.pack(pady=20)
 
 button_b = tk.Button(root, text="Send 'b'", command=send_command_b)
 button_b.pack(pady=20)
+
+button_c = tk.Button(root, text="Send 'c'", command=send_command_c)
+button_c.pack(pady=20)
 
 root.mainloop()
