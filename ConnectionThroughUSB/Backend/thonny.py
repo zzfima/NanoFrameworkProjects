@@ -5,6 +5,9 @@ import time
 
 led = machine.Pin(2, machine.Pin.OUT)
 
+# ESP32 GPIO 26
+relay = Pin(26, Pin.OUT)
+
 led.value(1)
 time.sleep(1)
 led.value(0)
@@ -18,20 +21,36 @@ def handle_command(command):
     print("Command received:", command)
     if command == "a":
         led.value(1)
-        time.sleep(1)
+        time.sleep(0.5)
         led.value(0)
-        time.sleep(1)
+        time.sleep(0.5)
         sys.stdout.buffer.write(b"test a\n")
+        relay.value(0)
     if command == "b":
         led.value(1)
-        time.sleep(1)
+        time.sleep(0.5)
         led.value(0)
-        time.sleep(1)
+        time.sleep(0.5)
         led.value(1)
-        time.sleep(1)
+        time.sleep(0.5)
         led.value(0)
-        time.sleep(1)
-        sys.stdout.buffer.write(b"test a\n")
+        time.sleep(0.5)
+        sys.stdout.buffer.write(b"test b\n")
+        relay.value(1)
+    if command == "c":
+        led.value(1)
+        time.sleep(0.5)
+        led.value(0)
+        time.sleep(0.5)
+        led.value(1)
+        time.sleep(0.5)
+        led.value(0)
+        time.sleep(0.5)
+        led.value(1)
+        time.sleep(0.5)
+        led.value(0)
+        time.sleep(0.5)
+        sys.stdout.buffer.write(b"test c\n")
     else:  # unrecognized command
         sys.stdout.buffer.write(b"error\n")
 
@@ -41,4 +60,5 @@ def readSerial():
 while True:
     message = readSerial()
     handle_command(message)
+
 
