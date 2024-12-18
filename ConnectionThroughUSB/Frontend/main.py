@@ -41,12 +41,12 @@ button_port = tk.Button(root, text="set port", command=send_command_set_port)
 button_port.pack(pady=5)
 
 button_a = tk.Button(
-    root, text="blink one time", command=send_command_a, state=tk.DISABLED
+    root, text="Close the circuit (blink one time)", command=send_command_a, state=tk.DISABLED
 )
 button_a.pack(pady=20)
 
 button_b = tk.Button(
-    root, text="blink two times", command=send_command_b, state=tk.DISABLED
+    root, text="Open the circuit (blink two times)", command=send_command_b, state=tk.DISABLED
 )
 button_b.pack(pady=20)
 
