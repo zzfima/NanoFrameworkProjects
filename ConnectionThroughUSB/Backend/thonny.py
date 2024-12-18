@@ -6,7 +6,7 @@ import time
 led = machine.Pin(2, machine.Pin.OUT)
 
 # ESP32 GPIO 26
-relay = Pin(26, Pin.OUT)
+relay = machine.Pin(26, machine.Pin.OUT)
 
 led.value(1)
 time.sleep(1)
