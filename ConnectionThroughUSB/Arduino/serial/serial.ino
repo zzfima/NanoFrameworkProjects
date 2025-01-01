@@ -73,43 +73,23 @@ void loop()
 
     if (incomingChar == '\n')
     { // Check if the user pressed Enter (new line character)
-
-      // Print the message
-      Serial.print("Message recieved: ");
-      Serial.println(msg);
-
       if (msg == "GetStatus")
         SendStatus();
       else
       {
-        // debug
-        Serial.println(msg[6]);
-        Serial.println(msg[8]);
-
         // message format: "Rellay0=1")
         int rellayNumber = (int)(msg[6] - '0');
         int rellayStatus = (int)(msg[8] - '0');
-
-        Serial.println(rellayNumber);
-        Serial.println(rellayStatus);
 
         if (rellayStatus == 1)
         {
           digitalWrite(rellayPins[rellayNumber], HIGH);
           rellayStatuses[rellayNumber] = 1;
-          Serial.print("Set relay HIGH ");
-          Serial.print(rellayNumber);
-          Serial.print(" status=");
-          Serial.println(rellayStatus);
         }
         else if (rellayStatus == 0)
         {
           digitalWrite(rellayPins[rellayNumber], LOW);
           rellayStatuses[rellayNumber] = 0;
-          Serial.print("Set relay LOW ");
-          Serial.print(rellayNumber);
-          Serial.print(" status=");
-          Serial.println(rellayStatus);
         }
       }
       // Clear the message buffer for the next input
