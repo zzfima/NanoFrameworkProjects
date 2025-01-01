@@ -5,6 +5,13 @@ String msg = "";
 
 const int rellaysCount = 8;
 
+/*
+  Commands list:
+  Rellay0=0
+  Rellay0=1
+  GetStatus
+*/
+
 //pinouts: https://randomnerdtutorials.com/esp32-pinout-reference-gpios/
 int rellayPins[rellaysCount] = {21, 22, 23, 25, 26, 27, 32, 33};
 
@@ -16,18 +23,6 @@ void Blink(int frequencyMs)
   delay(frequencyMs);
   digitalWrite(LED_BUILTIN, LOW);
   delay(frequencyMs);
-}
-
-void printStartMessages()
-{
-  Blink(1000);
-  Serial.println("Welcome to 8 relay commander");
-
-  Serial.println("Commands list:");
-  Serial.println("Rellay0=0");
-  Serial.println("Rellay0=1");
-  Serial.println("GetStatus");
-  Blink(1000);
 }
 
 // the setup function runs once when you press reset or power the board
@@ -44,9 +39,9 @@ void setup()
 
   // turn off all relays
   for (int i = 0; i < rellaysCount; i++)
-    digitalWrite(rellayPins[i], LOW);
+    digitalWrite(rellayPins[i], HIGH);
 
-  printStartMessages();
+  Blink(1000);
 }
 
 void SendStatus()
@@ -83,12 +78,12 @@ void loop()
 
         if (rellayStatus == 1)
         {
-          digitalWrite(rellayPins[rellayNumber], HIGH);
+          digitalWrite(rellayPins[rellayNumber], LOW);
           rellayStatuses[rellayNumber] = 1;
         }
         else if (rellayStatus == 0)
         {
-          digitalWrite(rellayPins[rellayNumber], LOW);
+          digitalWrite(rellayPins[rellayNumber], HIGH);
           rellayStatuses[rellayNumber] = 0;
         }
       }

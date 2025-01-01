@@ -1,9 +1,6 @@
 ﻿using System;
 using System.IO.Ports;
 using System.Windows.Forms;
-using System.Windows.Threading;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
