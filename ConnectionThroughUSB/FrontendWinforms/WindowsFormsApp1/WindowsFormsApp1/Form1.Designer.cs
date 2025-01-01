@@ -306,7 +306,7 @@
 			this.Controls.Add(this.btnSetPort);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "8 rellays commander";
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);
