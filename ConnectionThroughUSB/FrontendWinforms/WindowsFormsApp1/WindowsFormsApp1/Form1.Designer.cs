@@ -75,7 +75,7 @@
 			this.btnRelay0On.TabIndex = 7;
 			this.btnRelay0On.Text = "Relay 0 On";
 			this.btnRelay0On.UseVisualStyleBackColor = false;
-			this.btnRelay0On.Click += new System.EventHandler(this.btnRelay0On_Click);
+			this.btnRelay0On.Click += new System.EventHandler(this.btnRelay0_On_Click);
 			// 
 			// btnRelay0Off
 			// 
@@ -87,7 +87,7 @@
 			this.btnRelay0Off.TabIndex = 8;
 			this.btnRelay0Off.Text = "Relay 0 Off";
 			this.btnRelay0Off.UseVisualStyleBackColor = false;
-			this.btnRelay0Off.Click += new System.EventHandler(this.btnRelay0Off_Click);
+			this.btnRelay0Off.Click += new System.EventHandler(this.btnRelay0_Off_Click);
 			// 
 			// btnRelay1Off
 			// 
@@ -99,7 +99,7 @@
 			this.btnRelay1Off.TabIndex = 10;
 			this.btnRelay1Off.Text = "Relay 1 Off";
 			this.btnRelay1Off.UseVisualStyleBackColor = false;
-			this.btnRelay1Off.Click += new System.EventHandler(this.btnRelay1Off_Click);
+			this.btnRelay1Off.Click += new System.EventHandler(this.btnRelay1_Off_Click);
 			// 
 			// btnRelay1On
 			// 
@@ -111,7 +111,7 @@
 			this.btnRelay1On.TabIndex = 9;
 			this.btnRelay1On.Text = "Relay 1 On";
 			this.btnRelay1On.UseVisualStyleBackColor = false;
-			this.btnRelay1On.Click += new System.EventHandler(this.btnRelay1On_Click);
+			this.btnRelay1On.Click += new System.EventHandler(this.btnRelay1_On_Click);
 			// 
 			// btnRelay2Off
 			// 
@@ -123,7 +123,7 @@
 			this.btnRelay2Off.TabIndex = 12;
 			this.btnRelay2Off.Text = "Relay 2 Off";
 			this.btnRelay2Off.UseVisualStyleBackColor = false;
-			this.btnRelay2Off.Click += new System.EventHandler(this.btnRelay2Off_Click);
+			this.btnRelay2Off.Click += new System.EventHandler(this.btnRelay2_Off_Click);
 			// 
 			// btnRelay2On
 			// 
@@ -135,7 +135,7 @@
 			this.btnRelay2On.TabIndex = 11;
 			this.btnRelay2On.Text = "Relay 2 On";
 			this.btnRelay2On.UseVisualStyleBackColor = false;
-			this.btnRelay2On.Click += new System.EventHandler(this.btnRelay2On_Click);
+			this.btnRelay2On.Click += new System.EventHandler(this.btnRelay2_On_Click);
 			// 
 			// btnRelay3Off
 			// 
@@ -147,7 +147,7 @@
 			this.btnRelay3Off.TabIndex = 14;
 			this.btnRelay3Off.Text = "Relay 3 Off";
 			this.btnRelay3Off.UseVisualStyleBackColor = false;
-			this.btnRelay3Off.Click += new System.EventHandler(this.btnRelay3Off_Click);
+			this.btnRelay3Off.Click += new System.EventHandler(this.btnRelay3_Off_Click);
 			// 
 			// btnRelay3On
 			// 
@@ -159,7 +159,7 @@
 			this.btnRelay3On.TabIndex = 13;
 			this.btnRelay3On.Text = "Relay 3 On";
 			this.btnRelay3On.UseVisualStyleBackColor = false;
-			this.btnRelay3On.Click += new System.EventHandler(this.btnRelay3On_Click);
+			this.btnRelay3On.Click += new System.EventHandler(this.btnRelay3_On_Click);
 			// 
 			// btnRelay4Off
 			// 
@@ -171,7 +171,7 @@
 			this.btnRelay4Off.TabIndex = 16;
 			this.btnRelay4Off.Text = "Relay 4 Off";
 			this.btnRelay4Off.UseVisualStyleBackColor = false;
-			this.btnRelay4Off.Click += new System.EventHandler(this.btnRelay4Off_Click);
+			this.btnRelay4Off.Click += new System.EventHandler(this.btnRelay4_Off_Click);
 			// 
 			// btnRelay4On
 			// 
@@ -183,7 +183,7 @@
 			this.btnRelay4On.TabIndex = 15;
 			this.btnRelay4On.Text = "Relay 4 On";
 			this.btnRelay4On.UseVisualStyleBackColor = false;
-			this.btnRelay4On.Click += new System.EventHandler(this.btnRelay4On_Click);
+			this.btnRelay4On.Click += new System.EventHandler(this.btnRelay4_On_Click);
 			// 
 			// btnRelay5Off
 			// 
@@ -195,7 +195,7 @@
 			this.btnRelay5Off.TabIndex = 18;
 			this.btnRelay5Off.Text = "Relay 5 Off";
 			this.btnRelay5Off.UseVisualStyleBackColor = false;
-			this.btnRelay5Off.Click += new System.EventHandler(this.btnRelay5Off_Click);
+			this.btnRelay5Off.Click += new System.EventHandler(this.btnRelay5_Off_Click);
 			// 
 			// btnRelay5On
 			// 
@@ -207,7 +207,7 @@
 			this.btnRelay5On.TabIndex = 17;
 			this.btnRelay5On.Text = "Relay 5 On";
 			this.btnRelay5On.UseVisualStyleBackColor = false;
-			this.btnRelay5On.Click += new System.EventHandler(this.btnRelay5On_Click);
+			this.btnRelay5On.Click += new System.EventHandler(this.btnRelay5_On_Click);
 			// 
 			// btnRelay6Off
 			// 
@@ -219,7 +219,7 @@
 			this.btnRelay6Off.TabIndex = 20;
 			this.btnRelay6Off.Text = "Relay 6 Off";
 			this.btnRelay6Off.UseVisualStyleBackColor = false;
-			this.btnRelay6Off.Click += new System.EventHandler(this.btnRelay6Off_Click);
+			this.btnRelay6Off.Click += new System.EventHandler(this.btnRelay6_Off_Click);
 			// 
 			// btnRelay6On
 			// 
@@ -231,7 +231,7 @@
 			this.btnRelay6On.TabIndex = 19;
 			this.btnRelay6On.Text = "Relay 6 On";
 			this.btnRelay6On.UseVisualStyleBackColor = false;
-			this.btnRelay6On.Click += new System.EventHandler(this.btnRelay6On_Click);
+			this.btnRelay6On.Click += new System.EventHandler(this.btnRelay6_On_Click);
 			// 
 			// btnRelay7Off
 			// 
@@ -243,7 +243,7 @@
 			this.btnRelay7Off.TabIndex = 22;
 			this.btnRelay7Off.Text = "Relay 7 Off";
 			this.btnRelay7Off.UseVisualStyleBackColor = false;
-			this.btnRelay7Off.Click += new System.EventHandler(this.btnRelay7Off_Click);
+			this.btnRelay7Off.Click += new System.EventHandler(this.btnRelay7_Off_Click);
 			// 
 			// btnRelay7On
 			// 
@@ -255,7 +255,7 @@
 			this.btnRelay7On.TabIndex = 21;
 			this.btnRelay7On.Text = "Relay 7 On";
 			this.btnRelay7On.UseVisualStyleBackColor = false;
-			this.btnRelay7On.Click += new System.EventHandler(this.btnRelay7On_Click);
+			this.btnRelay7On.Click += new System.EventHandler(this.btnRelay7_On_Click);
 			// 
 			// btnGetStatus
 			// 

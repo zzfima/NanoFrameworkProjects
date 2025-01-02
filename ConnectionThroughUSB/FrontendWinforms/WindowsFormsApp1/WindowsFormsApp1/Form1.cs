@@ -52,22 +52,22 @@ namespace WindowsFormsApp1
 		}
 
 		#region Relays
-		private void btnRelay0On_Click(object sender, EventArgs e) => RelaySetStatus(0, 1);
-		private void btnRelay0Off_Click(object sender, EventArgs e) => RelaySetStatus(0, 0);
-		private void btnRelay1On_Click(object sender, EventArgs e) => RelaySetStatus(1, 1);
-		private void btnRelay1Off_Click(object sender, EventArgs e) => RelaySetStatus(1, 0);
-		private void btnRelay2On_Click(object sender, EventArgs e) => RelaySetStatus(2, 1);
-		private void btnRelay2Off_Click(object sender, EventArgs e) => RelaySetStatus(2, 0);
-		private void btnRelay3On_Click(object sender, EventArgs e) => RelaySetStatus(3, 1);
-		private void btnRelay3Off_Click(object sender, EventArgs e) => RelaySetStatus(3, 0);
-		private void btnRelay4On_Click(object sender, EventArgs e) => RelaySetStatus(4, 1);
-		private void btnRelay4Off_Click(object sender, EventArgs e) => RelaySetStatus(4, 0);
-		private void btnRelay5On_Click(object sender, EventArgs e) => RelaySetStatus(5, 1);
-		private void btnRelay5Off_Click(object sender, EventArgs e) => RelaySetStatus(5, 0);
-		private void btnRelay6On_Click(object sender, EventArgs e) => RelaySetStatus(6, 1);
-		private void btnRelay6Off_Click(object sender, EventArgs e) => RelaySetStatus(6, 0);
-		private void btnRelay7On_Click(object sender, EventArgs e) => RelaySetStatus(7, 1);
-		private void btnRelay7Off_Click(object sender, EventArgs e) => RelaySetStatus(7, 0);
+		private void btnRelay0_On_Click(object sender, EventArgs e) => RelaySetStatus(0, 1);
+		private void btnRelay0_Off_Click(object sender, EventArgs e) => RelaySetStatus(0, 0);
+		private void btnRelay1_On_Click(object sender, EventArgs e) => RelaySetStatus(1, 1);
+		private void btnRelay1_Off_Click(object sender, EventArgs e) => RelaySetStatus(1, 0);
+		private void btnRelay2_On_Click(object sender, EventArgs e) => RelaySetStatus(2, 1);
+		private void btnRelay2_Off_Click(object sender, EventArgs e) => RelaySetStatus(2, 0);
+		private void btnRelay3_On_Click(object sender, EventArgs e) => RelaySetStatus(3, 1);
+		private void btnRelay3_Off_Click(object sender, EventArgs e) => RelaySetStatus(3, 0);
+		private void btnRelay4_On_Click(object sender, EventArgs e) => RelaySetStatus(4, 1);
+		private void btnRelay4_Off_Click(object sender, EventArgs e) => RelaySetStatus(4, 0);
+		private void btnRelay5_On_Click(object sender, EventArgs e) => RelaySetStatus(5, 1);
+		private void btnRelay5_Off_Click(object sender, EventArgs e) => RelaySetStatus(5, 0);
+		private void btnRelay6_On_Click(object sender, EventArgs e) => RelaySetStatus(6, 1);
+		private void btnRelay6_Off_Click(object sender, EventArgs e) => RelaySetStatus(6, 0);
+		private void btnRelay7_On_Click(object sender, EventArgs e) => RelaySetStatus(7, 1);
+		private void btnRelay7_Off_Click(object sender, EventArgs e) => RelaySetStatus(7, 0);
 
 		private void RelaySetStatus(int relayNumber, int status) => _serialPort.WriteLine($"Rellay{relayNumber}={status}");
 		#endregion
