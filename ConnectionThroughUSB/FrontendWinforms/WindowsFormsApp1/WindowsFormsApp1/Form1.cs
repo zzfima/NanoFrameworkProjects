@@ -2,7 +2,7 @@
 using System.IO.Ports;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace InterlockManager
 {
 	public partial class Form1 : Form
 	{
@@ -52,8 +52,16 @@ namespace WindowsFormsApp1
 		}
 
 		#region Relays
-		private void btnRelay0_On_Click(object sender, EventArgs e) => RelaySetStatus(0, 1);
-		private void btnRelay0_Off_Click(object sender, EventArgs e) => RelaySetStatus(0, 0);
+		private void btnRelay0_On_Click(object sender, EventArgs e)
+		{
+			RelaySetStatus(0, 1);
+			RelaySetStatus(1, 1);
+		}
+		private void btnRelay0_Off_Click(object sender, EventArgs e)
+		{
+			RelaySetStatus(0, 0);
+			RelaySetStatus(1, 0);
+		}
 		private void btnRelay1_On_Click(object sender, EventArgs e) => RelaySetStatus(1, 1);
 		private void btnRelay1_Off_Click(object sender, EventArgs e) => RelaySetStatus(1, 0);
 		private void btnRelay2_On_Click(object sender, EventArgs e) => RelaySetStatus(2, 1);
