@@ -37,8 +37,11 @@ namespace InterlockManager
 				groupBoxRellays.Enabled = true;
 				groupBoxComPort.Enabled = false;
 				_serialPort.DataReceived += _serialPort_DataReceived;
+				Log($"Connected to {comboBoxComPorts.SelectedItem.ToString()}");
 			}
 		}
+
+		private void Log(string v) => listBoxLogs.Items.Add($"{DateTime.Now.ToShortTimeString()} - {v}");
 
 		private void _serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
 		{
@@ -56,11 +59,13 @@ namespace InterlockManager
 		{
 			RelaySetStatus(0, 1);
 			RelaySetStatus(1, 1);
+			Log($"Interlock On");
 		}
 		private void btnRelay0_Off_Click(object sender, EventArgs e)
 		{
 			RelaySetStatus(0, 0);
 			RelaySetStatus(1, 0);
+			Log($"Interlock On");
 		}
 		private void btnRelay1_On_Click(object sender, EventArgs e) => RelaySetStatus(1, 1);
 		private void btnRelay1_Off_Click(object sender, EventArgs e) => RelaySetStatus(1, 0);

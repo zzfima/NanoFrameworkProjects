@@ -36,16 +36,20 @@
 			this.groupBoxRellays = new System.Windows.Forms.GroupBox();
 			this.comboBoxComPorts = new System.Windows.Forms.ComboBox();
 			this.groupBoxComPort = new System.Windows.Forms.GroupBox();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.listBoxLogs = new System.Windows.Forms.ListBox();
 			this.groupBoxRellays.SuspendLayout();
 			this.groupBoxComPort.SuspendLayout();
+			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btnSetPort
 			// 
-			this.btnSetPort.Location = new System.Drawing.Point(125, 21);
+			this.btnSetPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSetPort.Location = new System.Drawing.Point(180, 32);
 			this.btnSetPort.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnSetPort.Name = "btnSetPort";
-			this.btnSetPort.Size = new System.Drawing.Size(97, 24);
+			this.btnSetPort.Size = new System.Drawing.Size(161, 79);
 			this.btnSetPort.TabIndex = 5;
 			this.btnSetPort.Text = "Set COM port";
 			this.btnSetPort.UseVisualStyleBackColor = true;
@@ -54,10 +58,11 @@
 			// btnRelay0On
 			// 
 			this.btnRelay0On.BackColor = System.Drawing.Color.Red;
+			this.btnRelay0On.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRelay0On.Location = new System.Drawing.Point(11, 41);
 			this.btnRelay0On.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRelay0On.Name = "btnRelay0On";
-			this.btnRelay0On.Size = new System.Drawing.Size(100, 79);
+			this.btnRelay0On.Size = new System.Drawing.Size(161, 79);
 			this.btnRelay0On.TabIndex = 7;
 			this.btnRelay0On.Text = "Interlock On";
 			this.btnRelay0On.UseVisualStyleBackColor = false;
@@ -66,10 +71,11 @@
 			// btnRelay0Off
 			// 
 			this.btnRelay0Off.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnRelay0Off.Location = new System.Drawing.Point(119, 41);
+			this.btnRelay0Off.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRelay0Off.Location = new System.Drawing.Point(180, 41);
 			this.btnRelay0Off.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRelay0Off.Name = "btnRelay0Off";
-			this.btnRelay0Off.Size = new System.Drawing.Size(100, 79);
+			this.btnRelay0Off.Size = new System.Drawing.Size(161, 79);
 			this.btnRelay0Off.TabIndex = 8;
 			this.btnRelay0Off.Text = "Interlock off";
 			this.btnRelay0Off.UseVisualStyleBackColor = false;
@@ -78,10 +84,11 @@
 			// btnGetStatus
 			// 
 			this.btnGetStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-			this.btnGetStatus.Location = new System.Drawing.Point(11, 165);
+			this.btnGetStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGetStatus.Location = new System.Drawing.Point(11, 137);
 			this.btnGetStatus.Margin = new System.Windows.Forms.Padding(4);
 			this.btnGetStatus.Name = "btnGetStatus";
-			this.btnGetStatus.Size = new System.Drawing.Size(100, 28);
+			this.btnGetStatus.Size = new System.Drawing.Size(161, 40);
 			this.btnGetStatus.TabIndex = 23;
 			this.btnGetStatus.Text = "Get Status";
 			this.btnGetStatus.UseVisualStyleBackColor = false;
@@ -90,10 +97,11 @@
 			// lblStatus
 			// 
 			this.lblStatus.AutoSize = true;
-			this.lblStatus.Location = new System.Drawing.Point(11, 197);
+			this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblStatus.Location = new System.Drawing.Point(8, 190);
 			this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblStatus.Name = "lblStatus";
-			this.lblStatus.Size = new System.Drawing.Size(19, 16);
+			this.lblStatus.Size = new System.Drawing.Size(37, 29);
 			this.lblStatus.TabIndex = 24;
 			this.lblStatus.Text = "---";
 			// 
@@ -103,39 +111,63 @@
 			this.groupBoxRellays.Controls.Add(this.btnRelay0On);
 			this.groupBoxRellays.Controls.Add(this.btnGetStatus);
 			this.groupBoxRellays.Controls.Add(this.btnRelay0Off);
-			this.groupBoxRellays.Location = new System.Drawing.Point(16, 77);
+			this.groupBoxRellays.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.groupBoxRellays.Location = new System.Drawing.Point(16, 145);
 			this.groupBoxRellays.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBoxRellays.Name = "groupBoxRellays";
 			this.groupBoxRellays.Padding = new System.Windows.Forms.Padding(4);
-			this.groupBoxRellays.Size = new System.Drawing.Size(232, 226);
+			this.groupBoxRellays.Size = new System.Drawing.Size(354, 234);
 			this.groupBoxRellays.TabIndex = 25;
 			this.groupBoxRellays.TabStop = false;
 			this.groupBoxRellays.Text = "Rellays control";
 			// 
 			// comboBoxComPorts
 			// 
+			this.comboBoxComPorts.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBoxComPorts.FormattingEnabled = true;
-			this.comboBoxComPorts.Location = new System.Drawing.Point(14, 21);
+			this.comboBoxComPorts.Location = new System.Drawing.Point(13, 33);
 			this.comboBoxComPorts.Name = "comboBoxComPorts";
-			this.comboBoxComPorts.Size = new System.Drawing.Size(100, 24);
+			this.comboBoxComPorts.Size = new System.Drawing.Size(159, 37);
 			this.comboBoxComPorts.TabIndex = 26;
 			// 
 			// groupBoxComPort
 			// 
 			this.groupBoxComPort.Controls.Add(this.btnSetPort);
 			this.groupBoxComPort.Controls.Add(this.comboBoxComPorts);
+			this.groupBoxComPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBoxComPort.Location = new System.Drawing.Point(16, 12);
 			this.groupBoxComPort.Name = "groupBoxComPort";
-			this.groupBoxComPort.Size = new System.Drawing.Size(232, 58);
+			this.groupBoxComPort.Size = new System.Drawing.Size(354, 126);
 			this.groupBoxComPort.TabIndex = 27;
 			this.groupBoxComPort.TabStop = false;
 			this.groupBoxComPort.Text = "COM Port";
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.listBoxLogs);
+			this.groupBox1.Location = new System.Drawing.Point(16, 397);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(353, 336);
+			this.groupBox1.TabIndex = 28;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Logs";
+			// 
+			// listBoxLogs
+			// 
+			this.listBoxLogs.FormattingEnabled = true;
+			this.listBoxLogs.ItemHeight = 16;
+			this.listBoxLogs.Location = new System.Drawing.Point(11, 21);
+			this.listBoxLogs.Name = "listBoxLogs";
+			this.listBoxLogs.ScrollAlwaysVisible = true;
+			this.listBoxLogs.Size = new System.Drawing.Size(330, 308);
+			this.listBoxLogs.TabIndex = 29;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(264, 316);
+			this.ClientSize = new System.Drawing.Size(383, 750);
+			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.groupBoxComPort);
 			this.Controls.Add(this.groupBoxRellays);
 			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -144,6 +176,7 @@
 			this.groupBoxRellays.ResumeLayout(false);
 			this.groupBoxRellays.PerformLayout();
 			this.groupBoxComPort.ResumeLayout(false);
+			this.groupBox1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -157,6 +190,8 @@
 		private System.Windows.Forms.GroupBox groupBoxRellays;
 		private System.Windows.Forms.ComboBox comboBoxComPorts;
 		private System.Windows.Forms.GroupBox groupBoxComPort;
+		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.ListBox listBoxLogs;
 	}
 }
 
