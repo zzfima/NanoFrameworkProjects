@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO.Ports;
+using System.Text;
 using System.Windows.Forms;
 
 namespace InterlockManager
@@ -65,7 +66,7 @@ namespace InterlockManager
 		{
 			RelaySetStatus(0, 0);
 			RelaySetStatus(1, 0);
-			Log($"Interlock On");
+			Log($"Interlock Off");
 		}
 		private void btnRelay1_On_Click(object sender, EventArgs e) => RelaySetStatus(1, 1);
 		private void btnRelay1_Off_Click(object sender, EventArgs e) => RelaySetStatus(1, 0);
@@ -86,5 +87,19 @@ namespace InterlockManager
 		#endregion
 
 		private void btnGetStatus_Click(object sender, EventArgs e) => _serialPort.WriteLine("GetStatus");
+
+		private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			StringBuilder help = new StringBuilder();
+			help.AppendLine("1. Connect Interlock Manager Box wires in series to door switch. Do it with de-energized EFEM! There is 24V");
+			help.AppendLine("2. Connect Interlock Manager Box USB to PC");
+			help.AppendLine("3. In device manager find COM port of attached Interlock Manager Box");
+			help.AppendLine("4. In current Software Application set this COM port and click 'Set COM port' button");
+			help.AppendLine("5. Control buttons:");
+			help.AppendLine("*** 'Interlock On' create Interlock");
+			help.AppendLine("*** 'Interlock Off' stop Interlock");
+			help.AppendLine("*** 'Get Relay Statuses' display relay statuses");
+			MessageBox.Show(help.ToString());
+		}
 	}
 }
