@@ -120,7 +120,7 @@
 			this.groupBoxRellays.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBoxRellays.Name = "groupBoxRellays";
 			this.groupBoxRellays.Padding = new System.Windows.Forms.Padding(4);
-			this.groupBoxRellays.Size = new System.Drawing.Size(373, 234);
+			this.groupBoxRellays.Size = new System.Drawing.Size(742, 234);
 			this.groupBoxRellays.TabIndex = 25;
 			this.groupBoxRellays.TabStop = false;
 			this.groupBoxRellays.Text = "Rellays control";
@@ -152,7 +152,7 @@
 			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBox1.Location = new System.Drawing.Point(16, 411);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(456, 392);
+			this.groupBox1.Size = new System.Drawing.Size(743, 392);
 			this.groupBox1.TabIndex = 28;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Logs";
@@ -165,7 +165,7 @@
 			this.listBoxLogs.Location = new System.Drawing.Point(11, 50);
 			this.listBoxLogs.Name = "listBoxLogs";
 			this.listBoxLogs.ScrollAlwaysVisible = true;
-			this.listBoxLogs.Size = new System.Drawing.Size(439, 323);
+			this.listBoxLogs.Size = new System.Drawing.Size(709, 323);
 			this.listBoxLogs.TabIndex = 29;
 			// 
 			// menuStrip1
@@ -175,7 +175,7 @@
             this.helpToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(485, 28);
+			this.menuStrip1.Size = new System.Drawing.Size(771, 28);
 			this.menuStrip1.TabIndex = 29;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -190,7 +190,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(485, 815);
+			this.ClientSize = new System.Drawing.Size(771, 815);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.groupBoxComPort);
 			this.Controls.Add(this.groupBoxRellays);
