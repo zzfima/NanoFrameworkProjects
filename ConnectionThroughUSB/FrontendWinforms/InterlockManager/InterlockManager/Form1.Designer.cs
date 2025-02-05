@@ -30,21 +30,25 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.btnSetPort = new System.Windows.Forms.Button();
-			this.btnRelay0On = new System.Windows.Forms.Button();
-			this.btnRelay0Off = new System.Windows.Forms.Button();
+			this.btnDoorInterlockOn = new System.Windows.Forms.Button();
+			this.btnDoorInterlockOff = new System.Windows.Forms.Button();
 			this.btnGetStatus = new System.Windows.Forms.Button();
 			this.lblStatus = new System.Windows.Forms.Label();
 			this.groupBoxRellays = new System.Windows.Forms.GroupBox();
+			this.btnLpInterlockOn = new System.Windows.Forms.Button();
+			this.btnLpInterlockOff = new System.Windows.Forms.Button();
 			this.comboBoxComPorts = new System.Windows.Forms.ComboBox();
 			this.groupBoxComPort = new System.Windows.Forms.GroupBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.listBoxLogs = new System.Windows.Forms.ListBox();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.groupBoxRellays.SuspendLayout();
 			this.groupBoxComPort.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.menuStrip1.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btnSetPort
@@ -59,37 +63,37 @@
 			this.btnSetPort.UseVisualStyleBackColor = true;
 			this.btnSetPort.Click += new System.EventHandler(this.btnSetPort_Click);
 			// 
-			// btnRelay0On
+			// btnDoorInterlockOn
 			// 
-			this.btnRelay0On.BackColor = System.Drawing.Color.Red;
-			this.btnRelay0On.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRelay0On.Location = new System.Drawing.Point(13, 48);
-			this.btnRelay0On.Margin = new System.Windows.Forms.Padding(4);
-			this.btnRelay0On.Name = "btnRelay0On";
-			this.btnRelay0On.Size = new System.Drawing.Size(161, 82);
-			this.btnRelay0On.TabIndex = 7;
-			this.btnRelay0On.Text = "Interlock On";
-			this.btnRelay0On.UseVisualStyleBackColor = false;
-			this.btnRelay0On.Click += new System.EventHandler(this.btnRelay0_On_Click);
+			this.btnDoorInterlockOn.BackColor = System.Drawing.Color.Red;
+			this.btnDoorInterlockOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDoorInterlockOn.Location = new System.Drawing.Point(13, 48);
+			this.btnDoorInterlockOn.Margin = new System.Windows.Forms.Padding(4);
+			this.btnDoorInterlockOn.Name = "btnDoorInterlockOn";
+			this.btnDoorInterlockOn.Size = new System.Drawing.Size(161, 82);
+			this.btnDoorInterlockOn.TabIndex = 7;
+			this.btnDoorInterlockOn.Text = "Interlock On Door";
+			this.btnDoorInterlockOn.UseVisualStyleBackColor = false;
+			this.btnDoorInterlockOn.Click += new System.EventHandler(this.btnDoorInterlockOn_Click);
 			// 
-			// btnRelay0Off
+			// btnDoorInterlockOff
 			// 
-			this.btnRelay0Off.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			this.btnRelay0Off.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRelay0Off.Location = new System.Drawing.Point(199, 48);
-			this.btnRelay0Off.Margin = new System.Windows.Forms.Padding(4);
-			this.btnRelay0Off.Name = "btnRelay0Off";
-			this.btnRelay0Off.Size = new System.Drawing.Size(161, 82);
-			this.btnRelay0Off.TabIndex = 8;
-			this.btnRelay0Off.Text = "Interlock off";
-			this.btnRelay0Off.UseVisualStyleBackColor = false;
-			this.btnRelay0Off.Click += new System.EventHandler(this.btnRelay0_Off_Click);
+			this.btnDoorInterlockOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnDoorInterlockOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDoorInterlockOff.Location = new System.Drawing.Point(15, 138);
+			this.btnDoorInterlockOff.Margin = new System.Windows.Forms.Padding(4);
+			this.btnDoorInterlockOff.Name = "btnDoorInterlockOff";
+			this.btnDoorInterlockOff.Size = new System.Drawing.Size(161, 82);
+			this.btnDoorInterlockOff.TabIndex = 8;
+			this.btnDoorInterlockOff.Text = "Interlock off Door";
+			this.btnDoorInterlockOff.UseVisualStyleBackColor = false;
+			this.btnDoorInterlockOff.Click += new System.EventHandler(this.btnDoorInterlockOff_Click);
 			// 
 			// btnGetStatus
 			// 
 			this.btnGetStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
 			this.btnGetStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnGetStatus.Location = new System.Drawing.Point(13, 144);
+			this.btnGetStatus.Location = new System.Drawing.Point(23, 57);
 			this.btnGetStatus.Margin = new System.Windows.Forms.Padding(4);
 			this.btnGetStatus.Name = "btnGetStatus";
 			this.btnGetStatus.Size = new System.Drawing.Size(161, 82);
@@ -102,7 +106,7 @@
 			// 
 			this.lblStatus.AutoSize = true;
 			this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblStatus.Location = new System.Drawing.Point(194, 197);
+			this.lblStatus.Location = new System.Drawing.Point(18, 191);
 			this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblStatus.Name = "lblStatus";
 			this.lblStatus.Size = new System.Drawing.Size(37, 29);
@@ -111,19 +115,45 @@
 			// 
 			// groupBoxRellays
 			// 
-			this.groupBoxRellays.Controls.Add(this.lblStatus);
-			this.groupBoxRellays.Controls.Add(this.btnRelay0On);
-			this.groupBoxRellays.Controls.Add(this.btnGetStatus);
-			this.groupBoxRellays.Controls.Add(this.btnRelay0Off);
+			this.groupBoxRellays.Controls.Add(this.btnLpInterlockOn);
+			this.groupBoxRellays.Controls.Add(this.btnLpInterlockOff);
+			this.groupBoxRellays.Controls.Add(this.btnDoorInterlockOn);
+			this.groupBoxRellays.Controls.Add(this.btnDoorInterlockOff);
 			this.groupBoxRellays.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBoxRellays.Location = new System.Drawing.Point(16, 170);
 			this.groupBoxRellays.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBoxRellays.Name = "groupBoxRellays";
 			this.groupBoxRellays.Padding = new System.Windows.Forms.Padding(4);
-			this.groupBoxRellays.Size = new System.Drawing.Size(742, 234);
+			this.groupBoxRellays.Size = new System.Drawing.Size(360, 234);
 			this.groupBoxRellays.TabIndex = 25;
 			this.groupBoxRellays.TabStop = false;
 			this.groupBoxRellays.Text = "Rellays control";
+			// 
+			// btnLpInterlockOn
+			// 
+			this.btnLpInterlockOn.BackColor = System.Drawing.Color.Red;
+			this.btnLpInterlockOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLpInterlockOn.Location = new System.Drawing.Point(182, 48);
+			this.btnLpInterlockOn.Margin = new System.Windows.Forms.Padding(4);
+			this.btnLpInterlockOn.Name = "btnLpInterlockOn";
+			this.btnLpInterlockOn.Size = new System.Drawing.Size(161, 82);
+			this.btnLpInterlockOn.TabIndex = 25;
+			this.btnLpInterlockOn.Text = "Interlock On LP";
+			this.btnLpInterlockOn.UseVisualStyleBackColor = false;
+			this.btnLpInterlockOn.Click += new System.EventHandler(this.btnLpInterlockOn_Click);
+			// 
+			// btnLpInterlockOff
+			// 
+			this.btnLpInterlockOff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.btnLpInterlockOff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLpInterlockOff.Location = new System.Drawing.Point(184, 138);
+			this.btnLpInterlockOff.Margin = new System.Windows.Forms.Padding(4);
+			this.btnLpInterlockOff.Name = "btnLpInterlockOff";
+			this.btnLpInterlockOff.Size = new System.Drawing.Size(161, 82);
+			this.btnLpInterlockOff.TabIndex = 26;
+			this.btnLpInterlockOff.Text = "Interlock off LP";
+			this.btnLpInterlockOff.UseVisualStyleBackColor = false;
+			this.btnLpInterlockOff.Click += new System.EventHandler(this.btnLpInterlockOff_Click);
 			// 
 			// comboBoxComPorts
 			// 
@@ -186,11 +216,24 @@
 			this.helpToolStripMenuItem.Text = "Help";
 			this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
 			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.btnGetStatus);
+			this.groupBox2.Controls.Add(this.lblStatus);
+			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.groupBox2.Location = new System.Drawing.Point(395, 170);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(364, 234);
+			this.groupBox2.TabIndex = 30;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Status";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(771, 815);
+			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.groupBoxComPort);
 			this.Controls.Add(this.groupBoxRellays);
@@ -201,11 +244,12 @@
 			this.Name = "Form1";
 			this.Text = "Interlock Commander";
 			this.groupBoxRellays.ResumeLayout(false);
-			this.groupBoxRellays.PerformLayout();
 			this.groupBoxComPort.ResumeLayout(false);
 			this.groupBox1.ResumeLayout(false);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
+			this.groupBox2.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -213,8 +257,8 @@
 
 		#endregion
 		private System.Windows.Forms.Button btnSetPort;
-		private System.Windows.Forms.Button btnRelay0On;
-		private System.Windows.Forms.Button btnRelay0Off;
+		private System.Windows.Forms.Button btnDoorInterlockOn;
+		private System.Windows.Forms.Button btnDoorInterlockOff;
 		private System.Windows.Forms.Button btnGetStatus;
 		private System.Windows.Forms.Label lblStatus;
 		private System.Windows.Forms.GroupBox groupBoxRellays;
@@ -224,6 +268,9 @@
 		private System.Windows.Forms.ListBox listBoxLogs;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+		private System.Windows.Forms.Button btnLpInterlockOn;
+		private System.Windows.Forms.Button btnLpInterlockOff;
+		private System.Windows.Forms.GroupBox groupBox2;
 	}
 }
 

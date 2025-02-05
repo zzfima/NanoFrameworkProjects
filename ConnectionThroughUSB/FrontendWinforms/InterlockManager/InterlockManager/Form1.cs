@@ -56,18 +56,35 @@ namespace InterlockManager
 		}
 
 		#region Relays
-		private void btnRelay0_On_Click(object sender, EventArgs e)
+
+		private void btnDoorInterlockOn_Click(object sender, EventArgs e)
 		{
 			RelaySetStatus(0, 1);
 			RelaySetStatus(1, 1);
-			Log($"Interlock On");
+			Log($"Interlock Door On");
 		}
-		private void btnRelay0_Off_Click(object sender, EventArgs e)
+
+		private void btnDoorInterlockOff_Click(object sender, EventArgs e)
 		{
 			RelaySetStatus(0, 0);
 			RelaySetStatus(1, 0);
-			Log($"Interlock Off");
+			Log($"Interlock Door Off");
 		}
+
+		private void btnLpInterlockOn_Click(object sender, EventArgs e)
+		{
+			RelaySetStatus(2, 1);
+			RelaySetStatus(3, 1);
+			Log($"Interlock LP On");
+		}
+
+		private void btnLpInterlockOff_Click(object sender, EventArgs e)
+		{
+			RelaySetStatus(2, 0);
+			RelaySetStatus(3, 0);
+			Log($"Interlock LP Off");
+		}
+
 		private void btnRelay1_On_Click(object sender, EventArgs e) => RelaySetStatus(1, 1);
 		private void btnRelay1_Off_Click(object sender, EventArgs e) => RelaySetStatus(1, 0);
 		private void btnRelay2_On_Click(object sender, EventArgs e) => RelaySetStatus(2, 1);
