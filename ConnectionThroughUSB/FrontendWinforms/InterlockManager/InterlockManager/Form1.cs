@@ -76,12 +76,6 @@ namespace InterlockManager
 		private void btnRelay3_Off_Click(object sender, EventArgs e) => RelaySetStatus(3, 0);
 		private void btnRelay4_On_Click(object sender, EventArgs e) => RelaySetStatus(4, 1);
 		private void btnRelay4_Off_Click(object sender, EventArgs e) => RelaySetStatus(4, 0);
-		private void btnRelay5_On_Click(object sender, EventArgs e) => RelaySetStatus(5, 1);
-		private void btnRelay5_Off_Click(object sender, EventArgs e) => RelaySetStatus(5, 0);
-		private void btnRelay6_On_Click(object sender, EventArgs e) => RelaySetStatus(6, 1);
-		private void btnRelay6_Off_Click(object sender, EventArgs e) => RelaySetStatus(6, 0);
-		private void btnRelay7_On_Click(object sender, EventArgs e) => RelaySetStatus(7, 1);
-		private void btnRelay7_Off_Click(object sender, EventArgs e) => RelaySetStatus(7, 0);
 
 		private void RelaySetStatus(int relayNumber, int status) => _serialPort.WriteLine($"Rellay{relayNumber}={status}");
 		#endregion

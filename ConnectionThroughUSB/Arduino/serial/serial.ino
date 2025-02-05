@@ -3,7 +3,7 @@
 
 String msg = "";
 
-const int rellaysCount = 8;
+const int rellaysCount = 4;
 
 /*
   Commands list:
@@ -13,9 +13,9 @@ const int rellaysCount = 8;
 */
 
 //pinouts: https://randomnerdtutorials.com/esp32-pinout-reference-gpios/
-int rellayPins[rellaysCount] = {21, 22, 23, 25, 26, 27, 32, 33};
+int rellayPins[rellaysCount] = {25, 26, 27, 32};
 
-int rellayStatuses[rellaysCount] = {0, 0, 0, 0, 0, 0, 0, 0};
+int rellayStatuses[rellaysCount] = {0, 0, 0, 0,};
 
 void Blink(int frequencyMs)
 {
