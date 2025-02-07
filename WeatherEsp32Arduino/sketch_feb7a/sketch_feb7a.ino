@@ -1,3 +1,18 @@
+/*
+create file credentials.h: right upper -> new tab-> credentials.h
+
+put inside:
+// Put your WiFi Credentials here
+const char* ssid = "xxxxxxxxx";
+const char* password = "xxxxxxxxxxx";
+String ApiKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+
+// Yosef Katran
+String lat = "xx.xxxxxxxxxxxxxx";
+String lon = "xx.xxxxxxxxxxxxxx";
+*/
+
+
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
