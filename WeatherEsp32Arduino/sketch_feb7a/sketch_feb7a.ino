@@ -1,4 +1,6 @@
 /*
+ESP32 Wrover Module
+
 create file credentials.h: right upper -> new tab-> credentials.h
 
 put inside:
