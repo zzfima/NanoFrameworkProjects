@@ -418,3 +418,4 @@ python-env-tools/**
 python_files/tests/*/.data/.coverage*
 python_files/tests/*/.data/*/.coverage*
 src/testTestingRootWkspc/coverageWorkspace/.coverage
+/WeatherEsp32Arduino/sketch_feb7a/credentials.h
