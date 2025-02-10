@@ -12,8 +12,12 @@ String ApiKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 // Yosef Katran
 String lat = "xx.xxxxxxxxxxxxxx";
 String lon = "xx.xxxxxxxxxxxxxx";
-*/
 
+Libraries to add:
+arduinojson
+Adafruit-GFX-Library
+Adafruit_SSD1306
+*/
 
 #include <WiFi.h>
 #include <HTTPClient.h>
@@ -22,7 +26,7 @@ String lon = "xx.xxxxxxxxxxxxxx";
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <Wire.h>
-#include <credentials.h>
+#include "credentials.h"
 
 #define SCREEN_WIDTH 128     // OLED display width, in pixels
 #define SCREEN_HEIGHT 64     // OLED display height, in pixels
@@ -31,11 +35,11 @@ String lon = "xx.xxxxxxxxxxxxxx";
 #define SDA_PIN 21
 #define SCL_PIN 22
 
+void displayWeather();
+void displayTime();
+
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-
-// URL Endpoint for the API
-String URL = "http://api.openweathermap.org/data/2.5/weather?";
 
 void setup() {
   Serial.begin(115200);          //init serial
@@ -71,7 +75,6 @@ void setup() {
   display.display();
   delay(2000);
   display.clearDisplay();
-}
 
   Serial.println("");
   Serial.println("WiFi connected.");
@@ -82,47 +85,101 @@ void setup() {
 void loop() {
   // wait for WiFi connection
   if (WiFi.status() == WL_CONNECTED) {
-    HTTPClient http;
-
-    // Set HTTP Request Final URL with Location and API key information
-    http.begin(URL + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + ApiKey);
-
-    // start connection and send HTTP Request
-    int httpCode = http.GET();
-    display.clearDisplay();
-
-    // httpCode will be negative on error
-    if (httpCode > 0) {
-      // Read Data as a JSON string
-      String JSON_Data = http.getString();
-      Serial.println(JSON_Data);
-      // Retrieve some information about the weather from the JSON format
-      DynamicJsonDocument doc(2048);
-      deserializeJson(doc, JSON_Data);
-      JsonObject obj = doc.as<JsonObject>();
-      // Display the Current Weather Info
-      const char* description = obj["weather"][0]["description"].as<const char*>();
-      const float temp = obj["main"]["temp"].as<float>();
-      const float humidity = obj["main"]["humidity"].as<float>();
-
-      display.setTextSize(1);
-      display.setCursor(0, 1);
-      display.println(description);
-
-      display.setTextSize(2);
-      display.println("");
-      display.print(temp);
-      display.println(" C, ");
-      display.print(humidity);
-      display.println(" %");
-    } else {
-      Serial.println("Error!");
-      display.clearDisplay();
-      display.println("Can't Get DATA!");
-    }
-    display.display();
-    http.end();
+    displayTime();
+    displayWeather();
   }
-  // Wait for 30 seconds
+}
+
+void displayWeather() {
+  HTTPClient http;
+
+  // Set HTTP Request Final URL with Location and API key information
+  http.begin(URLWeather + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + ApiKey);
+
+  // start connection and send HTTP Request
+  int httpCode = http.GET();
+  display.clearDisplay();
+
+  // httpCode will be negative on error
+  if (httpCode > 0) {
+    // Read Data as a JSON string
+    String JSON_Data = http.getString();
+    Serial.println(JSON_Data);
+    // Retrieve some information about the weather from the JSON format
+    DynamicJsonDocument doc(2048);
+    deserializeJson(doc, JSON_Data);
+    JsonObject obj = doc.as<JsonObject>();
+    // Display the Current Weather Info
+    const char* description = obj["weather"][0]["description"].as<const char*>();
+    const float temp = obj["main"]["temp"].as<float>();
+    const float humidity = obj["main"]["humidity"].as<float>();
+
+    display.setTextSize(1);
+    display.setCursor(0, 1);
+    display.println(description);
+
+    display.setTextSize(2);
+    display.println("");
+    display.print(temp);
+    display.println(" C");
+    display.print(humidity);
+    display.println(" %");
+  } else {
+    Serial.println("Error!");
+    display.clearDisplay();
+    display.println("Can't Get DATA!");
+  }
+  display.display();
+  http.end();
+
+  delay(30000);
+}
+
+void displayTime() {
+  HTTPClient http;
+
+  // Set HTTP Request Final URL with Location information
+  http.begin(URLTime + "latitude=" + lat + "&longitude=" + lon);
+
+  // Start connection and send HTTP Request
+  int httpCode = http.GET();
+  display.clearDisplay();
+
+  // httpCode will be negative on error
+  if (httpCode > 0) {
+    // Read Data as a JSON string
+    String JSON_Data = http.getString();
+    Serial.println(JSON_Data);
+    // Retrieve some information about the time from the JSON format
+    DynamicJsonDocument doc(1024);
+    deserializeJson(doc, JSON_Data);
+    JsonObject obj = doc.as<JsonObject>();
+    // Display the Current Time Info
+    int day = obj["day"];
+    int month = obj["month"];
+    int year = obj["year"];
+
+    int hour = obj["hour"];
+    int minute = obj["minute"];
+
+    display.setTextSize(2);
+    display.setCursor(0, 1);
+    display.print(day);
+    display.print(".");
+    display.print(month);
+    display.print(".");
+    display.println(year);
+
+    display.print(hour);
+    display.print(":");
+    display.print(minute);
+  } else {
+    Serial.println("Error!");
+    display.clearDisplay();
+    display.println("Can't Get DATA!");
+  }
+  display.display();
+  http.end();
+
   delay(30000);
 }
