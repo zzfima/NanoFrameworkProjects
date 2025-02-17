@@ -111,12 +111,20 @@ void displayWeather() {
     JsonObject obj = doc.as<JsonObject>();
     // Display the Current Weather Info
     const char* description = obj["weather"][0]["description"].as<const char*>();
+    const char* place = obj["name"].as<const char*>();
+    const char* country = obj["sys"]["country"].as<const char*>();
+
     const float temp = obj["main"]["temp"].as<float>();
     const float humidity = obj["main"]["humidity"].as<float>();
 
     display.setTextSize(1);
     display.setCursor(0, 1);
-    display.println(description);
+    display.print("now ");
+    display.print(description);
+    display.println(" at");
+    display.print(place);
+    display.print(" ,");
+    display.println(country);
 
     display.setTextSize(2);
     display.println("");
